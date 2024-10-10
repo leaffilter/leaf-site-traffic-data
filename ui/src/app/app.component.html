@@ -1,0 +1,32 @@
+
+<div class="functionality">
+  <span>{{ data[selected].title }}</span>
+  <input type="number" [(ngModel)]="metricLimit" />
+</div>
+
+<table>
+  <thead>
+    <tr>
+      @for (day of week; track day;) {
+        <th (mouseover)="columnMouseOver(day)" (mouseout)="columnMouseOut()">{{ day }}</th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (row of datum; track index; let index = $index;) {
+      <tr [class.all-low-metric]="isMetricRowOver(index) === false">
+        <td>{{ getTime(index) }}</td>
+        @for (dayIndex of indexes; track dayIndex;) {
+          <td
+            [class.low-metric]="isMetricOver(index, dayIndex) === false"
+            [class.row-over]="isColumnOver(dayIndex)"
+          >
+            {{ getMetric(index, dayIndex) }}
+          </td>
+        }
+      </tr>  
+    }
+  </tbody>
+</table>
+
+<router-outlet />
