@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const parse = require('csv-parse');
+const csv = require('csv-parser');
+
+let result = [];
 
 async function main() {
   console.log('--- main running');
@@ -19,10 +21,37 @@ async function main() {
   
   console.log('--- main: files - ', files.length);
   files.forEach((file) => {
-    const data = fs.readFileSync(path.join(jsonDirectory, file));
-    const json = JSON.parse(data.toString());
-    const domain = getDomain(file);
+    result = [];
+    fs.createReadStream(path.join(jsonDirectory, file))
+      .pipe(csv())
+      .on('data', handleData)
+      .on('end', reportData.bind(null, file));
   });
 }
 main();
 
+function handleData(line) {
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+  const timeString = line['_1'];
+  if (timeString === 'Collection Time') return;
+
+  const day = new Date(timeString);
+  const dayOfWeek = days[day.getDay()];
+  const hour = day.getHours();
+
+  if (result[hour] === undefined) {
+    result[hour] = { [dayOfWeek]: 1 };
+  } else {
+    if (result[hour].hasOwnProperty(dayOfWeek) === false) {
+      result[hour][dayOfWeek] = 1;
+    } else {
+      result[hour][dayOfWeek]++;
+    }
+  }
+  // console.log(timeString, day.getHours(), dayOfWeek, hour, result[dayOfWeek]);
+}
+
+function reportData(file) {
+  console.log('=== file: ', file);
+  console.table(result);
+}
