@@ -1,9 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import www_leaffilter_com from '../assets/output/cloudflare--www-leaffilter-com-2024-09-10--2024-10-10.json';
+import www_leaffilter_com from '../assets/output/www-leaffilter-com.json';
 import { CommonModule, NgFor, NgForOf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
+interface Datum {
+  '0': number;
+  '1': number;
+  '2': number;
+  '3': number;
+  '4': number;
+  '5': number;
+  '6': number;
+};
 
 @Component({
   selector: 'app-root',
@@ -22,20 +32,13 @@ export class AppComponent {
   indexes = ['0', '1', '2', '3', '4', '5', '6'];
 
   selected: string = 'www_leaffilter_com';
-  data: { [type: string]: { title: string; }; } = {
+  data: { [type: string]: { title: string; import: any; }; } = {
     www_leaffilter_com: {
       title: 'www.leaffilter.com',
+      import: www_leaffilter_com,
     }
   }
-  datum: Array<{
-    '0': number;
-    '1': number;
-    '2': number;
-    '3': number;
-    '4': number;
-    '5': number;
-    '6': number;
-  }> = www_leaffilter_com;
+  datum: Array<Datum> = this.getSum(www_leaffilter_com);
 
   metricLimit: string = '50000';
 
@@ -80,5 +83,33 @@ export class AppComponent {
   isColumnOver = (day: string): boolean => {
     const dayText: string = this.week[+day + 1];
     return dayText === this.columnHover;
+  };
+
+  getKeys(item: { [key: string]: Array<Datum> }): Array<string> {
+    const keys = ['SUMMARY', ...Object.keys(item)];
+    return keys;
+  }
+  getSum(item: { [key: string]: Array<Datum> }): Array<Datum> {
+    const keys = Object.keys(item);
+    const result: Array<Datum> = [];
+
+    keys.forEach((key: string) => {
+      const data: Array<Datum> = item[key];
+      data.forEach((subset: Datum, index: number) => {
+        if (result[index] === undefined) {
+          result[index] = subset;
+        } else {
+          result[index]['0'] = result[index]['0'] + subset['0'];
+          result[index]['1'] = result[index]['1'] + subset['1'];
+          result[index]['2'] = result[index]['2'] + subset['2'];
+          result[index]['3'] = result[index]['3'] + subset['3'];
+          result[index]['4'] = result[index]['4'] + subset['4'];
+          result[index]['5'] = result[index]['5'] + subset['5'];
+          result[index]['6'] = result[index]['6'] + subset['6'];
+        }
+      });
+    });
+
+    return result;
   };
 }
