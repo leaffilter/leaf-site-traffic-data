@@ -40,7 +40,6 @@ function reportData(file) {
 }
 
 function handleData(intervals, metrics) {
-  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const result = [];
 
   for (let i = 0, len = intervals.length; i < len; i++) {
@@ -52,9 +51,12 @@ function handleData(intervals, metrics) {
     const hour = day.getHours();
 
     if (result[hour] === undefined) {
-      result[hour] = { [dayOfWeek]: metric };
+      result[hour] = { [dayOfWeek]: { metric, count: 1 } };
+    } else if (result[hour][dayOfWeek] === undefined) {
+      result[hour][dayOfWeek] = result[hour][dayOfWeek] = { metric, count: 1 };
     } else {
-      result[hour][dayOfWeek] = metric;
+      result[hour][dayOfWeek].metric = result[hour][dayOfWeek].metric + metric;
+      result[hour][dayOfWeek].count = result[hour][dayOfWeek].count + 1;
     }
   }
 

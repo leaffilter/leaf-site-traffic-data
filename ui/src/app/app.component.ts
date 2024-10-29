@@ -6,13 +6,7 @@ import { CommonModule, NgFor, NgForOf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 interface Datum {
-  '0': number;
-  '1': number;
-  '2': number;
-  '3': number;
-  '4': number;
-  '5': number;
-  '6': number;
+  [key: string]: { metric: number; count: number; };
 };
 
 @Component({
@@ -54,7 +48,9 @@ export class AppComponent {
   };
 
   getMetric = (index: number, day: string): number => {
-    return (this.datum[index] as any)[day];
+    const data: { metric: number, count: number } = (this.datum[index] as any)[day];
+    const average = Math.round(data.metric / data.count);
+    return average;
   };
 
   isMetricOver = (index: number, day: string): boolean => {
@@ -85,29 +81,30 @@ export class AppComponent {
     return dayText === this.columnHover;
   };
 
-  getKeys(item: { [key: string]: Array<Datum> }): Array<string> {
+  getKeys(item: { [key: string]: /*Array<Datum>*/ any }): Array<string> {
     const keys = ['SUMMARY', ...Object.keys(item)];
     return keys;
   }
-  getSum(item: { [key: string]: Array<Datum> }): Array<Datum> {
+  getSum(item: { [key: string]: Datum }): Array<Datum> {
     const keys = Object.keys(item);
     const result: Array<Datum> = [];
 
     keys.forEach((key: string) => {
-      const data: Array<Datum> = item[key];
-      data.forEach((subset: Datum, index: number) => {
-        if (result[index] === undefined) {
-          result[index] = subset;
-        } else {
-          result[index]['0'] = result[index]['0'] + subset['0'];
-          result[index]['1'] = result[index]['1'] + subset['1'];
-          result[index]['2'] = result[index]['2'] + subset['2'];
-          result[index]['3'] = result[index]['3'] + subset['3'];
-          result[index]['4'] = result[index]['4'] + subset['4'];
-          result[index]['5'] = result[index]['5'] + subset['5'];
-          result[index]['6'] = result[index]['6'] + subset['6'];
-        }
-      });
+      console.log(item[key]);
+      // const data: Array<Datum> = item[key];
+      // data.forEach((subset: Datum, index: number) => {
+      //   if (result[index] === undefined) {
+      //     result[index] = subset;
+      //   } else {
+      //     for (let i = 0, len = 6; i < len; i++) {
+      //       const i_string: string = i.toString();
+      //       result[index][i_string] = {
+      //         metric: result[index][i_string].metric + subset[i_string].metric,
+      //         count: result[index][i_string].count + subset[i_string].count
+      //       };
+      //     }
+      //   }
+      // });
     });
 
     return result;
