@@ -17,3 +17,5 @@ This script will generate the data file.
 ```script
 npm run process
 ```
+
+When the base file is created in the `ui/src/app/assets/output` folder, the data should be copied and added to the `--summary.json` file. The 30-days of data should be collected on or around the 10th of the month from Cloudflare via Postman.
