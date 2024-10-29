@@ -1,18 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import www_leaffilter_com from '../assets/output/www-leaffilter-com.json';
+import www_leaffilter_com from '../assets/output/www-leaffilter-com--summary.json';
 import { CommonModule, NgFor, NgForOf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 interface Datum {
-  '0': number;
-  '1': number;
-  '2': number;
-  '3': number;
-  '4': number;
-  '5': number;
-  '6': number;
+  [key: string]: { metric: number; count: number; };
 };
 
 @Component({
@@ -54,18 +48,24 @@ export class AppComponent {
   };
 
   getMetric = (index: number, day: string): number => {
-    return (this.datum[index] as any)[day];
+    const data: { metric: number, count: number } = (this.datum[index] as any)[day];
+    const average = Math.round(data.metric / data.count);
+    return average;
   };
 
   isMetricOver = (index: number, day: string): boolean => {
     const metricCheck: number = + this.metricLimit;
-    return (this.datum[index] as any)[day] > metricCheck;
+    const point: { metric: number, count: number } = (this.datum[index] as any)[day];
+    const check: number = Math.round(point.metric / point.count);
+  return check > metricCheck;
   };
   isMetricRowOver = (index: number): boolean => {
     const metricCheck: number = + this.metricLimit;
     let isRowOver: boolean = false;
     for (let i = 0, len = this.indexes.length; i < len; i++) {
-      if ((this.datum[index] as any)[this.indexes[i]] > metricCheck) {
+      const point: { metric: number, count: number } = (this.datum[index] as any)[this.indexes[i]];
+      const check: number = Math.round(point.metric / point.count);
+      if (check > metricCheck) {
         isRowOver = true;
         break;
       }
@@ -85,7 +85,7 @@ export class AppComponent {
     return dayText === this.columnHover;
   };
 
-  getKeys(item: { [key: string]: Array<Datum> }): Array<string> {
+  getKeys(item: { [key: string]: /*Array<Datum>*/ any }): Array<string> {
     const keys = ['SUMMARY', ...Object.keys(item)];
     return keys;
   }
@@ -99,17 +99,18 @@ export class AppComponent {
         if (result[index] === undefined) {
           result[index] = subset;
         } else {
-          result[index]['0'] = result[index]['0'] + subset['0'];
-          result[index]['1'] = result[index]['1'] + subset['1'];
-          result[index]['2'] = result[index]['2'] + subset['2'];
-          result[index]['3'] = result[index]['3'] + subset['3'];
-          result[index]['4'] = result[index]['4'] + subset['4'];
-          result[index]['5'] = result[index]['5'] + subset['5'];
-          result[index]['6'] = result[index]['6'] + subset['6'];
+          for (let i = 0, len = 6; i < len; i++) {
+            const i_string: string = i.toString();
+            result[index][i_string] = {
+              metric: result[index][i_string].metric + subset[i_string].metric,
+              count: result[index][i_string].count + subset[i_string].count
+            };
+          }
         }
       });
     });
 
+    console.log(result);
     return result;
   };
 }
