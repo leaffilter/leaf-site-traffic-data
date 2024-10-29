@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import www_leaffilter_com from '../assets/output/www-leaffilter-com.json';
+import www_leaffilter_com from '../assets/output/www-leaffilter-com--summary.json';
 import { CommonModule, NgFor, NgForOf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -55,13 +55,17 @@ export class AppComponent {
 
   isMetricOver = (index: number, day: string): boolean => {
     const metricCheck: number = + this.metricLimit;
-    return (this.datum[index] as any)[day] > metricCheck;
+    const point: { metric: number, count: number } = (this.datum[index] as any)[day];
+    const check: number = Math.round(point.metric / point.count);
+  return check > metricCheck;
   };
   isMetricRowOver = (index: number): boolean => {
     const metricCheck: number = + this.metricLimit;
     let isRowOver: boolean = false;
     for (let i = 0, len = this.indexes.length; i < len; i++) {
-      if ((this.datum[index] as any)[this.indexes[i]] > metricCheck) {
+      const point: { metric: number, count: number } = (this.datum[index] as any)[this.indexes[i]];
+      const check: number = Math.round(point.metric / point.count);
+      if (check > metricCheck) {
         isRowOver = true;
         break;
       }
@@ -85,28 +89,28 @@ export class AppComponent {
     const keys = ['SUMMARY', ...Object.keys(item)];
     return keys;
   }
-  getSum(item: { [key: string]: Datum }): Array<Datum> {
+  getSum(item: { [key: string]: Array<Datum> }): Array<Datum> {
     const keys = Object.keys(item);
     const result: Array<Datum> = [];
 
     keys.forEach((key: string) => {
-      console.log(item[key]);
-      // const data: Array<Datum> = item[key];
-      // data.forEach((subset: Datum, index: number) => {
-      //   if (result[index] === undefined) {
-      //     result[index] = subset;
-      //   } else {
-      //     for (let i = 0, len = 6; i < len; i++) {
-      //       const i_string: string = i.toString();
-      //       result[index][i_string] = {
-      //         metric: result[index][i_string].metric + subset[i_string].metric,
-      //         count: result[index][i_string].count + subset[i_string].count
-      //       };
-      //     }
-      //   }
-      // });
+      const data: Array<Datum> = item[key];
+      data.forEach((subset: Datum, index: number) => {
+        if (result[index] === undefined) {
+          result[index] = subset;
+        } else {
+          for (let i = 0, len = 6; i < len; i++) {
+            const i_string: string = i.toString();
+            result[index][i_string] = {
+              metric: result[index][i_string].metric + subset[i_string].metric,
+              count: result[index][i_string].count + subset[i_string].count
+            };
+          }
+        }
+      });
     });
 
+    console.log(result);
     return result;
   };
 }
