@@ -1,721 +1,721 @@
 [
     {
         "0": {
-            "metric": 150207,
+            "metric": 26368,
             "count": 4
         },
         "1": {
-            "metric": 156966,
+            "metric": 40406,
             "count": 4
         },
         "2": {
-            "metric": 175787,
+            "metric": 44370,
             "count": 4
         },
         "3": {
-            "metric": 169506,
+            "metric": 44519,
             "count": 4
         },
         "4": {
-            "metric": 190508,
+            "metric": 51640,
             "count": 5
         },
         "5": {
-            "metric": 206690,
+            "metric": 51532,
             "count": 5
         },
         "6": {
-            "metric": 166761,
+            "metric": 35494,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 146704,
+            "metric": 29914,
             "count": 5
         },
         "1": {
-            "metric": 117899,
+            "metric": 31240,
             "count": 4
         },
         "2": {
-            "metric": 128256,
+            "metric": 31369,
             "count": 4
         },
         "3": {
-            "metric": 125454,
+            "metric": 31504,
             "count": 4
         },
         "4": {
-            "metric": 143197,
+            "metric": 37872,
             "count": 5
         },
         "5": {
-            "metric": 160444,
+            "metric": 38751,
             "count": 5
         },
         "6": {
-            "metric": 129883,
+            "metric": 27875,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 92516,
+            "metric": 22714,
             "count": 4
         },
         "1": {
-            "metric": 96006,
+            "metric": 28539,
             "count": 4
         },
         "2": {
-            "metric": 98509,
+            "metric": 26892,
             "count": 4
         },
         "3": {
-            "metric": 112788,
+            "metric": 28847,
             "count": 4
         },
         "4": {
-            "metric": 126652,
+            "metric": 33201,
             "count": 5
         },
         "5": {
-            "metric": 126428,
+            "metric": 35287,
             "count": 5
         },
         "6": {
-            "metric": 103589,
+            "metric": 24852,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 83585,
+            "metric": 21943,
             "count": 4
         },
         "1": {
-            "metric": 81575,
+            "metric": 27382,
             "count": 4
         },
         "2": {
-            "metric": 89149,
+            "metric": 24341,
             "count": 4
         },
         "3": {
-            "metric": 95133,
+            "metric": 25766,
             "count": 4
         },
         "4": {
-            "metric": 101572,
+            "metric": 31718,
             "count": 5
         },
         "5": {
-            "metric": 108633,
+            "metric": 31881,
             "count": 5
         },
         "6": {
-            "metric": 87248,
+            "metric": 22173,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 80173,
+            "metric": 21650,
             "count": 4
         },
         "1": {
-            "metric": 79562,
+            "metric": 26277,
             "count": 4
         },
         "2": {
-            "metric": 88964,
+            "metric": 30513,
             "count": 4
         },
         "3": {
-            "metric": 88795,
+            "metric": 27350,
             "count": 4
         },
         "4": {
-            "metric": 90568,
+            "metric": 33175,
             "count": 5
         },
         "5": {
-            "metric": 110314,
+            "metric": 33967,
             "count": 5
         },
         "6": {
-            "metric": 86356,
+            "metric": 21928,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 91126,
+            "metric": 21452,
             "count": 4
         },
         "1": {
-            "metric": 98616,
+            "metric": 32263,
             "count": 4
         },
         "2": {
-            "metric": 107501,
+            "metric": 33798,
             "count": 4
         },
         "3": {
-            "metric": 103825,
+            "metric": 34942,
             "count": 4
         },
         "4": {
-            "metric": 118488,
+            "metric": 43956,
             "count": 5
         },
         "5": {
-            "metric": 124610,
+            "metric": 40665,
             "count": 5
         },
         "6": {
-            "metric": 92669,
+            "metric": 24046,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 113127,
+            "metric": 25871,
             "count": 4
         },
         "1": {
-            "metric": 126083,
+            "metric": 49416,
             "count": 4
         },
         "2": {
-            "metric": 134275,
+            "metric": 50390,
             "count": 4
         },
         "3": {
-            "metric": 141839,
+            "metric": 50604,
             "count": 4
         },
         "4": {
-            "metric": 150799,
+            "metric": 61181,
             "count": 5
         },
         "5": {
-            "metric": 157315,
+            "metric": 60633,
             "count": 5
         },
         "6": {
-            "metric": 113502,
+            "metric": 29157,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 158243,
+            "metric": 32723,
             "count": 4
         },
         "1": {
-            "metric": 180918,
+            "metric": 85618,
             "count": 4
         },
         "2": {
-            "metric": 188701,
+            "metric": 87201,
             "count": 4
         },
         "3": {
-            "metric": 190712,
+            "metric": 85917,
             "count": 4
         },
         "4": {
-            "metric": 219996,
+            "metric": 103010,
             "count": 5
         },
         "5": {
-            "metric": 231695,
+            "metric": 104833,
             "count": 5
         },
         "6": {
-            "metric": 163807,
+            "metric": 41500,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 194090,
+            "metric": 43535,
             "count": 4
         },
         "1": {
-            "metric": 311016,
+            "metric": 150642,
             "count": 4
         },
         "2": {
-            "metric": 225630,
+            "metric": 132098,
             "count": 4
         },
         "3": {
-            "metric": 311847,
+            "metric": 165535,
             "count": 5
         },
         "4": {
-            "metric": 337790,
+            "metric": 168242,
             "count": 5
         },
         "5": {
-            "metric": 297919,
+            "metric": 158836,
             "count": 5
         },
         "6": {
-            "metric": 262248,
+            "metric": 75801,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 232826,
+            "metric": 47446,
             "count": 4
         },
         "1": {
-            "metric": 377154,
+            "metric": 168404,
             "count": 4
         },
         "2": {
-            "metric": 303985,
+            "metric": 162095,
             "count": 4
         },
         "3": {
-            "metric": 633214,
+            "metric": 489932,
             "count": 5
         },
         "4": {
-            "metric": 484750,
+            "metric": 210319,
             "count": 5
         },
         "5": {
-            "metric": 346105,
+            "metric": 155238,
             "count": 5
         },
         "6": {
-            "metric": 279475,
+            "metric": 71844,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 229536,
+            "metric": 54085,
             "count": 4
         },
         "1": {
-            "metric": 351640,
+            "metric": 159908,
             "count": 4
         },
         "2": {
-            "metric": 310018,
+            "metric": 164764,
             "count": 4
         },
         "3": {
-            "metric": 393202,
+            "metric": 191249,
             "count": 5
         },
         "4": {
-            "metric": 445548,
+            "metric": 204582,
             "count": 5
         },
         "5": {
-            "metric": 412316,
+            "metric": 152717,
             "count": 4
         },
         "6": {
-            "metric": 252999,
+            "metric": 67082,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 226490,
+            "metric": 50892,
             "count": 4
         },
         "1": {
-            "metric": 326304,
+            "metric": 159375,
             "count": 4
         },
         "2": {
-            "metric": 303780,
+            "metric": 158292,
             "count": 4
         },
         "3": {
-            "metric": 358380,
+            "metric": 200060,
             "count": 5
         },
         "4": {
-            "metric": 398548,
+            "metric": 194210,
             "count": 5
         },
         "5": {
-            "metric": 385738,
+            "metric": 149615,
             "count": 4
         },
         "6": {
-            "metric": 261097,
+            "metric": 67419,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 240302,
+            "metric": 52196,
             "count": 4
         },
         "1": {
-            "metric": 373181,
+            "metric": 148699,
             "count": 4
         },
         "2": {
-            "metric": 319108,
+            "metric": 142328,
             "count": 4
         },
         "3": {
-            "metric": 388959,
+            "metric": 181333,
             "count": 5
         },
         "4": {
-            "metric": 419667,
+            "metric": 187310,
             "count": 5
         },
         "5": {
-            "metric": 345154,
+            "metric": 135641,
             "count": 4
         },
         "6": {
-            "metric": 247468,
+            "metric": 63132,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 215788,
+            "metric": 46353,
             "count": 4
         },
         "1": {
-            "metric": 306404,
+            "metric": 153007,
             "count": 4
         },
         "2": {
-            "metric": 298879,
+            "metric": 141944,
             "count": 4
         },
         "3": {
-            "metric": 347036,
+            "metric": 179723,
             "count": 5
         },
         "4": {
-            "metric": 388877,
+            "metric": 180681,
             "count": 5
         },
         "5": {
-            "metric": 283159,
+            "metric": 129722,
             "count": 4
         },
         "6": {
-            "metric": 239523,
+            "metric": 62369,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 222555,
+            "metric": 47940,
             "count": 4
         },
         "1": {
-            "metric": 288191,
+            "metric": 137657,
             "count": 4
         },
         "2": {
-            "metric": 294528,
+            "metric": 143660,
             "count": 4
         },
         "3": {
-            "metric": 374955,
+            "metric": 171349,
             "count": 5
         },
         "4": {
-            "metric": 388324,
+            "metric": 173090,
             "count": 5
         },
         "5": {
-            "metric": 272827,
+            "metric": 123984,
             "count": 4
         },
         "6": {
-            "metric": 242439,
+            "metric": 61281,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 235071,
+            "metric": 46579,
             "count": 4
         },
         "1": {
-            "metric": 287774,
+            "metric": 130138,
             "count": 4
         },
         "2": {
-            "metric": 296501,
+            "metric": 132997,
             "count": 4
         },
         "3": {
-            "metric": 354430,
+            "metric": 167123,
             "count": 5
         },
         "4": {
-            "metric": 345272,
+            "metric": 163796,
             "count": 5
         },
         "5": {
-            "metric": 255545,
+            "metric": 117379,
             "count": 4
         },
         "6": {
-            "metric": 233112,
+            "metric": 54835,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 233631,
+            "metric": 45693,
             "count": 4
         },
         "1": {
-            "metric": 305510,
+            "metric": 118879,
             "count": 4
         },
         "2": {
-            "metric": 293358,
+            "metric": 123322,
             "count": 4
         },
         "3": {
-            "metric": 345104,
+            "metric": 152171,
             "count": 5
         },
         "4": {
-            "metric": 323792,
+            "metric": 148663,
             "count": 5
         },
         "5": {
-            "metric": 241742,
+            "metric": 108109,
             "count": 4
         },
         "6": {
-            "metric": 232345,
+            "metric": 50227,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 251964,
+            "metric": 43546,
             "count": 4
         },
         "1": {
-            "metric": 308839,
+            "metric": 93411,
             "count": 4
         },
         "2": {
-            "metric": 302142,
+            "metric": 99216,
             "count": 4
         },
         "3": {
-            "metric": 343223,
+            "metric": 119541,
             "count": 5
         },
         "4": {
-            "metric": 321799,
+            "metric": 116912,
             "count": 5
         },
         "5": {
-            "metric": 249736,
+            "metric": 86230,
             "count": 4
         },
         "6": {
-            "metric": 231150,
+            "metric": 44827,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 239016,
+            "metric": 46038,
             "count": 4
         },
         "1": {
-            "metric": 290584,
+            "metric": 76697,
             "count": 4
         },
         "2": {
-            "metric": 268880,
+            "metric": 81603,
             "count": 4
         },
         "3": {
-            "metric": 325527,
+            "metric": 102211,
             "count": 5
         },
         "4": {
-            "metric": 291143,
+            "metric": 99858,
             "count": 5
         },
         "5": {
-            "metric": 240895,
+            "metric": 71831,
             "count": 4
         },
         "6": {
-            "metric": 229875,
+            "metric": 44091,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 260627,
+            "metric": 44255,
             "count": 4
         },
         "1": {
-            "metric": 289395,
+            "metric": 69314,
             "count": 4
         },
         "2": {
-            "metric": 271505,
+            "metric": 70119,
             "count": 4
         },
         "3": {
-            "metric": 322758,
+            "metric": 89819,
             "count": 5
         },
         "4": {
-            "metric": 327787,
+            "metric": 83279,
             "count": 5
         },
         "5": {
-            "metric": 242358,
+            "metric": 60813,
             "count": 4
         },
         "6": {
-            "metric": 253306,
+            "metric": 40217,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 262991,
+            "metric": 41642,
             "count": 4
         },
         "1": {
-            "metric": 300747,
+            "metric": 64155,
             "count": 4
         },
         "2": {
-            "metric": 282773,
+            "metric": 64846,
             "count": 4
         },
         "3": {
-            "metric": 338279,
+            "metric": 80262,
             "count": 5
         },
         "4": {
-            "metric": 340309,
+            "metric": 74143,
             "count": 5
         },
         "5": {
-            "metric": 251167,
+            "metric": 54884,
             "count": 4
         },
         "6": {
-            "metric": 227914,
+            "metric": 36826,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 245706,
+            "metric": 37397,
             "count": 4
         },
         "1": {
-            "metric": 305033,
+            "metric": 56188,
             "count": 4
         },
         "2": {
-            "metric": 287697,
+            "metric": 56376,
             "count": 4
         },
         "3": {
-            "metric": 330852,
+            "metric": 70258,
             "count": 5
         },
         "4": {
-            "metric": 370422,
+            "metric": 71431,
             "count": 5
         },
         "5": {
-            "metric": 244274,
+            "metric": 47629,
             "count": 4
         },
         "6": {
-            "metric": 216881,
+            "metric": 33656,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 196713,
+            "metric": 34593,
             "count": 4
         },
         "1": {
-            "metric": 267798,
+            "metric": 44558,
             "count": 4
         },
         "2": {
-            "metric": 238700,
+            "metric": 45439,
             "count": 4
         },
         "3": {
-            "metric": 288805,
+            "metric": 55769,
             "count": 5
         },
         "4": {
-            "metric": 327062,
+            "metric": 54180,
             "count": 5
         },
         "5": {
-            "metric": 246693,
+            "metric": 39748,
             "count": 4
         },
         "6": {
-            "metric": 205481,
+            "metric": 31807,
             "count": 4
         }
     },
     {
         "0": {
-            "metric": 176898,
+            "metric": 30249,
             "count": 4
         },
         "1": {
-            "metric": 217569,
+            "metric": 36384,
             "count": 4
         },
         "2": {
-            "metric": 215972,
+            "metric": 35891,
             "count": 4
         },
         "3": {
-            "metric": 259461,
+            "metric": 46144,
             "count": 5
         },
         "4": {
-            "metric": 272188,
+            "metric": 42200,
             "count": 5
         },
         "5": {
-            "metric": 223064,
+            "metric": 35561,
             "count": 4
         },
         "6": {
-            "metric": 184141,
+            "metric": 27523,
             "count": 4
         }
     }

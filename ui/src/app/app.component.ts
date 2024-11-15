@@ -1,12 +1,26 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
-import www_leaffilter_com from '../assets/output/www-leaffilter-com--summary.json';
 import { CommonModule, NgFor, NgForOf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import www_leaffilter_ca from '../assets/output/www-leaffilter-ca--summary.json';
+import www_leaffilter_com from '../assets/output/www-leaffilter-com--summary.json';
+import www_leafhome_com from '../assets/output/www-leafhome-com--summary.json';
+import www_leafhomesafetysolutions_com from '../assets/output/www-leafhomesafetysolutions-com--summary.json';
+import www_leafhomewatersolutions_com from '../assets/output/www-leafhomewatersolutions-com--summary.json';
+
+
 interface Datum {
-  [key: string]: { metric: number; count: number; };
+  [key: string]: {
+    metric: number;
+    count: number;
+  };
+};
+
+interface DatumType {
+  title: string;
+  import: any;
+  metricLimit: string;
 };
 
 @Component({
@@ -25,16 +39,48 @@ export class AppComponent {
   week = ['TIME', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   indexes = ['0', '1', '2', '3', '4', '5', '6'];
 
-  selected: string = 'www_leaffilter_com';
-  data: { [type: string]: { title: string; import: any; }; } = {
+  selected: string = 'www_leaffilter_ca';
+  dataList: Array<string> = [
+    'www_leaffilter_ca',
+    'www_leaffilter_com',
+    'www_leafhome_com',
+    'www_leafhomesafetysolutions_com',
+    'www_leafhomewatersolutions_com',
+  ];
+  data: { [key: string]: DatumType } = {
+    www_leaffilter_ca: {
+      title: 'www.leaffilter.ca',
+      import: www_leaffilter_ca,
+      metricLimit: '1200',
+    },
     www_leaffilter_com: {
       title: 'www.leaffilter.com',
       import: www_leaffilter_com,
+      metricLimit: '50000',
+    },
+    www_leafhome_com: {
+      title: 'www.leafhome.com',
+      import: www_leafhome_com,
+      metricLimit: '15000',
+    },
+    www_leafhomesafetysolutions_com: {
+      title: 'www.leafhomesafetysolutions.com',
+      import: www_leafhomesafetysolutions_com,
+      metricLimit: '2200',
+    },
+    www_leafhomewatersolutions_com: {
+      title: 'www.leafhomewatersolutions.com',
+      import: www_leafhomewatersolutions_com,
+      metricLimit: '15000',
     }
   }
-  datum: Array<Datum> = this.getSum(www_leaffilter_com);
+  datum: Array<Datum> = this.getSum(www_leafhomewatersolutions_com);
 
-  metricLimit: string = '50000';
+  metricLimit: string = '15000';
+
+  changeDataset = (set: string): void => {
+    this.getSum(this.data[this.selected].import);
+  };
 
   getTime = (index: number): string => {
     if (index === 0) return 'Midnight';

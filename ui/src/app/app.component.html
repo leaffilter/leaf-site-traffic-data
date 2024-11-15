@@ -1,6 +1,12 @@
 
 <div class="functionality">
-  <span>{{ data[selected].title }}</span>
+  <select [(ngModel)]="selected" (change)="changeDataset(selected)">
+    @for (item of dataList; track item;) {
+      <option [value]="item">
+        {{data[item].title}}
+      </option>
+    }
+  </select>
   <input type="number" [(ngModel)]="metricLimit" />
 </div>
 
